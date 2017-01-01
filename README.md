@@ -1,82 +1,80 @@
-# Show Facebook Computer Vision Tags Chrome Extension
+# Show Facebook Computer Vision Tags Chrome Extension (German version)
 
 ![](https://cloud.githubusercontent.com/assets/896692/21574672/fa4cecb4-ceab-11e6-896c-101025c68dc3.png)
 
-Since April 2016, Facebook has been [automatically adding `alt` tags](https://code.facebook.com/posts/457605107772545/under-the-hood-building-accessibility-tools-for-the-visually-impaired-on-facebook/) to images
-you upload that are populated with keywords representing the content of your images:
+This is a german translation of [ageitgey's](https://github.com/ageitgey) [Show Facebook Computer Vision Tags Chrome Extension](https://github.com/ageitgey/show-facebook-computer-vision-tags) .
+
+Seit April 2016 [fügt Facebook automatisch `alt` tags zu Bildern hinzu](https://code.facebook.com/posts/457605107772545/under-the-hood-building-accessibility-tools-for-the-visually-impaired-on-facebook/)
+, die du hochlädst. Diese Tags repräsentieren den Inhalt deiner Bilder:
 
 ```html
 <img csrc="https://facebook.com/some-url.jpg"
-alt="Image may contain: golf, grass, outdoor and nature"
+alt="Bild könnte enthalten: Golf, Gras, im Freien und Natur"
 width="316" height="237">
 ```
 
-They are labeling your images using a [Deep ConvNet](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721#.luqjma59e)
-built by Facebook's
-[FAIR team](https://research.fb.com/category/facebook-ai-research-fair/).
+Deine Bilder werden mit der Hilfe eines [Deep ConvNet](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721#.luqjma59e)
+gekennzeichnet, das von Facebooks
+[FAIR team](https://research.fb.com/category/facebook-ai-research-fair/) entwickelt wurde.
 
-On one hand, this is really great. It improves accessibility for blind users
-who depend on screen readers which are only capable of processing text.
+Auf der einen Seite ist das sehr gut. Es verbessert die Zugänglichkeit für blinde Nutzer,
+die abhängig von Bildschirmlesern sind, die nur Text verarbeiten können.
 
-But I think a lot of internet users don't realize the amount of information that is now routinely extracted from photographs. Facebook (and Google, Apple, Amazon, etc) can easily tell from your photographs if you have a pet dog, if you collect cameras, if you play golf, if you have children, or if you are just really into sunglasses. There's nothing stopping them from using this information to show you relevant ads just based on photos of you - even if another user uploaded the photo and didn't even directly tag you!
+Aber ich denke, dass sehr viele Internetnutzer nicht erkennen, wie viele Informationen jetzt routinemäßig von Bildern extrahiert werden.
+Facebook (und Google, Apple, Amazon, etc.) können durch deine Bilder ganz einfach herausfinden, dass du einen Hund hast, ob du Kameras sammelst, ob du Golf spielst, ob du Kinder hast, oder ob du sehr auf Sonnenbrillen abfährst. Es kann sie nichts davon abhalten, diese Informationen zu nutzen, um dir relevante Werbung anzuzeigen. Nur basierend auf deinen Bildern und sogar, wenn ein anderer Nutzer das Bild hochgeladen hat und dich nichtmal direkt getaggt hat!
 
-This is a very simple Chrome Extension that I hacked together in a few minutes to make it easy to see the tags that Facebook is automatically applying to you and your friends' photos. Once you install it, all the photos you see on your Facebook timeline will automatically be overlaid with their tags, like this:
+Das ist eine sehr einfache Chrome Erweiterung, die ich in ein paar Minuten entwickelt habe, um es einfacher zu machen, die Tags zu sehen, die Facebook automatisch zu deinen Bildern hinzufügt.
+Wenn du diese Erweiterung installiert, werden alle Fotos, die du in deiner Facebook timeline siehst, automatisch mit einem Overlay mit den Tags des Bildes versehen, so wie hier:
 
 <img width="524" src="https://cloud.githubusercontent.com/assets/896692/21574687/3443b268-ceac-11e6-85ee-45f59408f9bb.png">
 
-The goal is simply to make everyone aware of the kind of information that is routinely extracted from your own images today. This isn't some technology that is 'coming soon', but this is something in *wide-spread production use now by every major internet company*. You can even [learn how to implement this kind of system yourself](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721) using widely available open-source software.
+Das Ziel ist es, alle aufmerksam darauf zu machen, welche Informationen heutzutage routinemäßig aus deinen Bildern extrahiert werden. Es ist keine Technologie, die "demnächst erhältlich" ist, sondern etwas, das *weitverbreitet und von jeder großen Internetfirma genutzt wird*. Man kann sogar [lernen, wie man so ein System selbst implementieren kann](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721), indem man weitestgehend erhältliche Open-Source Software nutzt.
 
-Here's some examples of the kinds of things that Facebook detects in your photos:
+Hier sind einige Beispiele von den Dingen, die Facebook in deinen Bildern erkennt:
 
-### Objects in your photos
+### Objekte in deinen Bildern
 
-It's possible to tell what kinds of objects are in your photos and identify your interests based on that.
+Es ist möglich zu erkennen, welche Objekte in deinen Fotos vorkommen und darauf basierend auch, welche Interessen du hast.
 
 ![](https://cloud.githubusercontent.com/assets/896692/21574712/aa1fd34a-ceac-11e6-98b0-b0b7a6a5d9fb.png)
 
-### Activities you are doing
+### Tätigkeiten, die du ausführst
 
-Whether you are eating, running, or playing golf, it's possible for an algorithm to tell what you are doing in your photographs.
+Egal ob du am Essen bist, am Rennen, am Golf Spielen, für einen Algorithmus ist es möglich herauszufinden, was du in deinen Bildern tust.
 
 <img width="523" alt="" src="https://cloud.githubusercontent.com/assets/896692/21574724/f5055da8-ceac-11e6-9ec0-14629f42deca.png">
 
-### When and where a photo was taken
+### Wann und wo ein Bild aufgenommen wurde
 
-You can tell if a photo was taken inside or outside, what the time of day was, what physical landmarks (mountains, trees, water, etc) were around, and so on.
+Man kann herausfinden, ob ein Foto drinnen oder draußen geschossen wurde, wie spät es war, welche landschaftlichen Kennzeichen (Berge, Bäume, Wasser, etc.) da waren, und so weiter.
 
 <img width="623" alt="screen shot 2016-12-30 at 4 30 36 pm" src="https://cloud.githubusercontent.com/assets/896692/21574743/5de83548-cead-11e6-9211-3e75a588523d.png">
 
-### Events you are attending
+### Events, an denen du teilnimmst
 
-It's even possible to tell which kind of sporting event you are attending.
+Es ist sogar möglich zu sagen, welche Art von Sportevent du besuchst.
 
 <img width="949" alt="screen shot 2016-12-30 at 4 35 31 pm" src="https://cloud.githubusercontent.com/assets/896692/21574780/24767440-ceae-11e6-9ee1-b5e065f89c93.png">
 
-These are just a few examples. See what kinds of things Facebook has found in your own photos!
+Das sind nur ein paar Beispiele. Siehe selbst, welche Sachen Facebook in deinen Bildern herausgefunden hat!
 
-# Installing this Chrome Extension
+# Installieren der Chrome Erweiterung
 
-1. Clone this repo so you have a copy in a folder locally.
-1. Open `chrome://extensions` in the location or go to `Tools` > `Extensions`
-1. Enable `Developer mode` by checking the checkbox in the upper-right corner.
-1. Click on the button labelled `Load unpacked extension...`.
-1. Select the directory where you cloned this repo to.
-1. Visit Facebook!
+1. Klone die Repository, sodass du eine lokale Kopie besitzt.
+2. Öffne "chrome://extensions" in der Adressleiste oder gehe zu "Weitere Tools" > "Erweiterungen"
+3. Aktiviere den "Entwicklermodus", indem du die Checkbox oben rechts anklickst.
+4. Klicke auf den Button "Entpackte Erweiterung laden...".
+5. Wähle den Pfad zu deiner geklonten Repository.
+6. Besuche Facebook!
 
-# Installing this in Firefox (Nightly Builds with Chrome Extension support only)
+# Installieren der Firefox Erweiterung (nur Nightly Builds mit Chrome Extension support)
 
-1. Clone this repo so you have a copy in a folder locally.
-1. Using a Firefox Nightly build, set `xpinstall.signatures.required` to `false`.
-1. Zip the files so that manifest.json is at the root of the zip file.
-1. Rename it from .zip to .xpi.
-1. Navigate to about:addons.
-1. Drag and drop your XPI onto the page.
-1. Click “Install” in the prompt.
-1. Restart Firefox.
-1. Visit Facebook!
-
-Caveats:
-
-1. This only works for English-speaking Facebook users. I made no attempt to make this work for any other language. Sorry! But you could easily fork this and make it work for a different language. There's not a lot to this.
-
- - [Álvaro Sarasúa](https://github.com/asarasua) made a Spanish version of this extension [here](https://github.com/asarasua/show-facebook-computer-vision-tags).
+1. Klone die Repository, sodass du eine lokale Kopie besitzt.
+2. Während du ein Firefox Nightly build nutzt, setze `xpinstall.signatures.required` auf `false`.
+3. Füge die Dateien zu einem Zip-Archiv hinzu, sodass manifest.json in der root directory der Zip-Datei liegt.
+4. Benenne die Datei von .zip zu .xpi um.
+5. Navigiere zu about:addons.
+6. Ziehe deine XPI Datei in die Seite hinein (Drag and Drop).
+7. Klicke auf "Installieren".
+8. Starte Firefox neu.
+9. Besuche Facebook!
