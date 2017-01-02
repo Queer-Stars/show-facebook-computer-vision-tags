@@ -66,15 +66,3 @@ Das sind nur ein paar Beispiele. Siehe selbst, welche Sachen Facebook in deinen 
 4. Klicke auf den Button "Entpackte Erweiterung laden...".
 5. Wähle den Pfad zu deiner geklonten Repository.
 6. Besuche Facebook!
-
-# Installieren der Firefox Erweiterung (nur Nightly Builds mit Chrome Extension support)
-
-1. Klone die Repository, sodass du eine lokale Kopie besitzt.
-2. Während du ein Firefox Nightly build nutzt, setze `xpinstall.signatures.required` auf `false`.
-3. Füge die Dateien zu einem Zip-Archiv hinzu, sodass manifest.json in der root directory der Zip-Datei liegt.
-4. Benenne die Datei von .zip zu .xpi um.
-5. Navigiere zu about:addons.
-6. Ziehe deine XPI Datei in die Seite hinein (Drag and Drop).
-7. Klicke auf "Installieren".
-8. Starte Firefox neu.
-9. Besuche Facebook!
